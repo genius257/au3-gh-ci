@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+        "au3unit": "^1.0.0"
+    },
+    "scripts": {
+        "build": "cd tests && ../au3pm/au3unit/build/au3unit.exe"
+    }
+}
