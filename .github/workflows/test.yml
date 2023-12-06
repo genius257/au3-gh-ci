@@ -24,12 +24,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Install wget
-        run: choco install wget --no-progress
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: wget https://github.com/genius257/au3pm/releases/download/0.3.0/au3pm.exe -O au3pm.exe
+        run: curl -o au3pm.exe https://github.com/genius257/au3pm/releases/download/0.3.0/au3pm.exe
 
       - name: list dir
         run: DIR
