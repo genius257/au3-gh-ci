@@ -28,6 +28,9 @@ jobs:
       - name: Run a one-line script
         run: curl https://github.com/genius257/au3pm/releases/download/0.3.0/au3pm.exe -o au3pm.exe -L
 
+      - name: Install dependencies
+        run: ./au3pm.exe install
+
       - name: Run tests
         run: ./au3pm.exe run test
 
