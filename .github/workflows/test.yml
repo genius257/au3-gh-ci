@@ -32,7 +32,7 @@ jobs:
         run: wget https://github.com/genius257/au3pm/releases/download/0.3.0/au3pm.exe -O au3pm.exe
 
       - name: list dir
-        run: DIR /B
+        run: DIR
 
       - name: Run tests
         run: au3pm.exe run test
