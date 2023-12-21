@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: ./au3pm.exe install
 
+      - name: Rebuild dependencies
+        run: ./au3pm.exe rebuild
+
       - name: Run tests
         run: ./au3pm.exe run test
 
