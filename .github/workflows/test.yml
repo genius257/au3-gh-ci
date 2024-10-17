@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: au3pm
-        uses: au3pm/au3pm-action@main
+        uses: au3pm/au3pm-action@latest
         with:
           commands: |
             install
