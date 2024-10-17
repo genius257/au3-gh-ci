@@ -24,24 +24,32 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: au3pm
+        uses: au3pm/au3pm-action@v1
+        with:
+          commands: |
+            install
+            rebuild
+            run test
+            
       # Runs a single command using the runners shell
       #- name: Run a one-line script
       #  run: curl https://github.com/genius257/au3pm/releases/download/0.3.1/au3pm.exe -o au3pm.exe -L
-      - uses: robinraju/release-downloader@v1
-        with:
-          repository: 'genius257/au3pm'
-          fileName: 'au3pm.exe'
-          latest: true
-          preRelease: true
+      #- uses: robinraju/release-downloader@v1
+      #  with:
+      #    repository: 'genius257/au3pm'
+      #    fileName: 'au3pm.exe'
+      #    latest: true
+      #    preRelease: true
 
-      - name: Install dependencies
-        run: ./au3pm.exe install
+      #- name: Install dependencies
+      #  run: ./au3pm.exe install
 
-      - name: Rebuild dependencies
-        run: ./au3pm.exe rebuild
+      #- name: Rebuild dependencies
+      #  run: ./au3pm.exe rebuild
 
-      - name: Run tests
-        run: ./au3pm.exe run test
+      #- name: Run tests
+      #  run: ./au3pm.exe run test
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
